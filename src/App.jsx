@@ -2,8 +2,8 @@ import { useState } from 'react';
 import './App.css'
 import Books from './components/books/Books';
 import NewBook from './components/newBook/NewBook';
-import { Prev } from 'react-bootstrap/esm/PageItem';
-const booksInitial   = [
+import Login from './components/login/Login';
+const booksInitials = [
   {
     id: 1,
     bookTitle: "100 años de soledad",
@@ -49,24 +49,28 @@ const booksInitial   = [
 
 function App() {
 
-  const[books, setBooks] = useState(booksInitial);
+  const [books, setBooks] = useState(booksInitials)
 
   const handleBookAdded = (enteredBook) => {
     const bookData = {
       ...enteredBook,
-      id: Math.random(),
+      id: Math.random().toString(),
+      bookRating: Array(Number(enteredBook.rating)).fill("*")
     };
 
-    setBooks((prevBooks) => [...prevBooks, bookData]);
-  };
+    setBooks((prevBooks) => {
+      return [...prevBooks, bookData]
+    });
+  }
 
   return (
-    <div>
-      <h1>Book champions app</h1>
+    <>
+      {/* <h1>Book champions app</h1>
       <p>Quiero leer libros!</p>
-      <NewBook onBookAdded = {handleBookAdded} />
-      <Books books={books} />
-    </div>
+      <NewBook onBookAdded={handleBookAdded} />
+      <Books books={books} /> */}
+      <Login />
+    </>
   )
 }
 
