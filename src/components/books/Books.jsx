@@ -29,11 +29,20 @@ const Books = ({ books }) => {
             <BookItem
               key={book.id}
               id={book.id}
+<<<<<<< HEAD
               bookTitle={book.bookTitle}
               author={book.bookAuthor}
               rating={book.bookRating}
               pages={book.pageCount}
               imageUrl={book.imageUrl}
+=======
+              title={book.bookTitle}
+              author={book.bookAuthor}
+              rating={book.bookRating}
+              pageCount={book.pageCount}
+              imageUrl={book.imageUrl}
+              available={book.available}
+>>>>>>> 42c33191e4cb1016fb45827db96b0ed3fd3c4577
             />
           ))
         ) : (
@@ -46,4 +55,7 @@ const Books = ({ books }) => {
 
 export default Books
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 42c33191e4cb1016fb45827db96b0ed3fd3c4577

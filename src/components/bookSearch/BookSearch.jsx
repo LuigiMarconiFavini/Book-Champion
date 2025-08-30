@@ -21,4 +21,8 @@ const BookSearch = ({ search, onSearch }) => {
     )
 }
 
+<<<<<<< HEAD
 export default BookSearch
+=======
+export default BookSearch
+>>>>>>> 42c33191e4cb1016fb45827db96b0ed3fd3c4577

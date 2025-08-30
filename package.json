@@ -14,7 +14,11 @@
     "react": "^19.1.0",
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.0",
+<<<<<<< HEAD
     "react-router": "^7.8.1"
+=======
+    "react-router": "^7.8.2"
+>>>>>>> 42c33191e4cb1016fb45827db96b0ed3fd3c4577
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

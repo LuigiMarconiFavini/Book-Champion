@@ -1,26 +1,44 @@
 import { useRef, useState } from "react";
 import { Button, Card, Col, Form, FormGroup, Row } from "react-bootstrap";
+<<<<<<< HEAD
 
 const Login = () => {
+=======
+import { useNavigate } from "react-router";
+
+const Login = ({ onLogin }) => {
+>>>>>>> 42c33191e4cb1016fb45827db96b0ed3fd3c4577
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState({
         email: false,
         password: false
     });
+<<<<<<< HEAD
 
+=======
+    const navigate = useNavigate();
+>>>>>>> 42c33191e4cb1016fb45827db96b0ed3fd3c4577
     const emailRef = useRef(null);
     const passwordRef = useRef(null);
 
 
     const handleEmailChange = (event) => {
         setEmail(event.target.value)
+<<<<<<< HEAD
         setErrors({...errors, email: false})
+=======
+        setErrors({ ...errors, email: false })
+>>>>>>> 42c33191e4cb1016fb45827db96b0ed3fd3c4577
     }
 
     const handlePasswordChange = (event) => {
         setPassword(event.target.value)
+<<<<<<< HEAD
         setErrors({...errors, password: false})
+=======
+        setErrors({ ...errors, password: false })
+>>>>>>> 42c33191e4cb1016fb45827db96b0ed3fd3c4577
     }
 
     const handleSubmit = (event) => {
@@ -41,9 +59,16 @@ const Login = () => {
 
         setErrors({ email: false, password: false })
         alert(`El email ingresado es: ${email} y el password es ${password}`)
+<<<<<<< HEAD
 
         setEmail("");
         setPassword("");
+=======
+        onLogin();
+        setEmail("");
+        setPassword("");
+        navigate("/");
+>>>>>>> 42c33191e4cb1016fb45827db96b0ed3fd3c4577
     }
 
     return (
